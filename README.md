@@ -24,13 +24,13 @@ pip install mne numpy matplotlib
 ## Example commands
 
 ```bash
-python eeg_noise_removal_pipeline.py --input data/sample.edf --output results --l_freq 1 --h_freq 40 --notch 50
+python eeg_noise_removal_pipeline.py --input data/S001R01.edf --output results --l_freq 1 --h_freq 40 --notch 50
 ```
 
 With optional ICA:
 
 ```bash
-python eeg_noise_removal_pipeline.py --input data/sample.edf --output results --l_freq 1 --h_freq 40 --notch 50 --run_ica --save_cleaned
+python eeg_noise_removal_pipeline.py --input data/S001R01.edf --output results --l_freq 1 --h_freq 40 --notch 50 --run_ica --save_cleaned
 ```
 
 ## Output files
@@ -58,4 +58,3 @@ A successful basic cleaning should show:
 ## Notes
 
 This is intentionally a simple baseline pipeline. More advanced methods from the literature include ASR, deep learning denoising, SOBI + machine learning + SWT, and full pipelines such as NEAR.
-
