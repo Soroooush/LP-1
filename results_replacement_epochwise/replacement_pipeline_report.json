@@ -1,0 +1,64 @@
+{
+  "dataset": {
+    "file": "data\\S001R01.edf",
+    "source": "PhysioNet EEG Motor Movement/Imagery Dataset / EEGMMIDB",
+    "exact_experiment": "Subject 1, Run 1: baseline eyes-open recording",
+    "why_used": "Public, small, MNE-compatible, 64-channel EEG suitable for demonstrating preprocessing steps.",
+    "limitation": "No labeled EOG/EMG/bad-channel artifacts; synthetic artifacts were added for demonstration.",
+    "metadata": {
+      "input_file": "data\\S001R01.edf",
+      "source_dataset": "PhysioNet EEG Motor Movement/Imagery Dataset / EEGMMIDB",
+      "exact_experiment": "Subject 1, Run 1: baseline eyes-open recording",
+      "n_channels": 64,
+      "channel_types": [
+        "eeg"
+      ],
+      "sampling_frequency_hz": 160.0,
+      "duration_seconds": 60.99375,
+      "first_10_channels": [
+        "Fc5.",
+        "Fc3.",
+        "Fc1.",
+        "Fcz.",
+        "Fc2.",
+        "Fc4.",
+        "Fc6.",
+        "C5..",
+        "C3..",
+        "C1.."
+      ]
+    }
+  },
+  "pipeline_steps": [
+    "load EEG data",
+    "raw time-domain and PSD inspection",
+    "band-pass filtering 1-40 Hz",
+    "50 Hz notch filtering",
+    "common average re-referencing",
+    "synthetic blink/muscle/bad-channel examples",
+    "global bad-channel detection using STD, peak-to-peak amplitude, and mean correlation metrics",
+    "epoch-wise bad-channel and bad-epoch detection",
+    "bad-channel interpolation for persistent/structural bad channels",
+    "ICA blink-like component removal example"
+  ],
+  "global_detected_suspicious_channels": [
+    "Fp1.",
+    "Fp2.",
+    "Af8.",
+    "Pz..",
+    "O1.."
+  ],
+  "bad_epochs": [],
+  "number_of_bad_channel_epoch_pairs": 109,
+  "persistent_bad_channels": [
+    "Pz..",
+    "O1.."
+  ],
+  "interpolated_channels": [
+    "Fp1",
+    "Pz",
+    "O1"
+  ],
+  "ica_blink_component": 0,
+  "outputs_folder": "results_replacement_epochwise"
+}
