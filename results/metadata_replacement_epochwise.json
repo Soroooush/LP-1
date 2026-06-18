@@ -1,0 +1,23 @@
+{
+  "input_file": "data\\S001R01.edf",
+  "source_dataset": "PhysioNet EEG Motor Movement/Imagery Dataset / EEGMMIDB",
+  "exact_experiment": "Subject 1, Run 1: baseline eyes-open recording",
+  "n_channels": 64,
+  "channel_types": [
+    "eeg"
+  ],
+  "sampling_frequency_hz": 160.0,
+  "duration_seconds": 60.99375,
+  "first_10_channels": [
+    "Fc5.",
+    "Fc3.",
+    "Fc1.",
+    "Fcz.",
+    "Fc2.",
+    "Fc4.",
+    "Fc6.",
+    "C5..",
+    "C3..",
+    "C1.."
+  ]
+}
