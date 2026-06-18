@@ -52,7 +52,7 @@ Recommended structure:
 ├── data/
 │   └── S001R01.edf
 ├── eeg_noise_removal_pipeline_REPLACEMENT_epochwise.ipynb
-├── results_replacement_epochwise/
+├── results/
 ├── README.md
 └── requirements.txt
 ```
@@ -145,7 +145,7 @@ ICA is demonstrated mainly for eye-blink artifacts because blink artifacts are s
 Output Files
 Running the notebook creates output files in:
 ```text
-results_replacement_epochwise/
+results/
 ```
 Typical outputs include:
 ```text
@@ -198,7 +198,7 @@ eeg_noise_removal_pipeline_REPLACEMENT_epochwise.ipynb
 Run all cells from top to bottom.
 The notebook will create:
 ```text
-results_replacement_epochwise/
+results/
 ```
 containing figures and JSON reports.
 ---
@@ -207,7 +207,7 @@ If the EEG file is large or should not be redistributed, do not commit the `data
 Recommended `.gitignore` entries:
 ```gitignore
 data/
-results_replacement_epochwise/
+results/
 *.edf
 *.fif
 *.png
